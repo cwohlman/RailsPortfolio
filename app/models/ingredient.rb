@@ -1,4 +1,4 @@
 class Ingredient < ActiveRecord::Base
 	belongs_to :recipe
-	has_many :recipe_steps
+	has_many :recipe_steps, dependent: :destroy
 end

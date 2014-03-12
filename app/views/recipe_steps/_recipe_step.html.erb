@@ -3,4 +3,7 @@
 	<span class="quantity"><%= recipe_step.quantity %></span>
 	<span class="unit"><%= recipe_step.unit %></span> of 
 	<span class="ingredient"><%= recipe_step.ingredient.name %></span>
+	<% if current_user == recipe_step.recipe.user %>
+		<%= link_to "delete", recipe_step, method: :delete %>
+	<% end %>
 </li>

@@ -4,6 +4,8 @@ Portfolio::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/help"
   resources :microposts
+  resources :ingredients
+  resources :recipe_steps
 
   root "pages#home"    
   get "home", to: "pages#home", as: "home"

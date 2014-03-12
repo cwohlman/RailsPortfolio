@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   
   # Custom Code
   has_many :microposts
-
+  has_many :recipes, dependent: :destroy
 
 
   def self.paged(page_number)
