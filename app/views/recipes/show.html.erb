@@ -9,8 +9,13 @@
 </p>
 
 <div class="row">
-	<div class="span9"></div>
-	<div class="span3">
+	<div class="col-sm-9">
+		<h3>Steps</h3>
+		<ul class="recipe_steps">
+			<%= render @recipe.recipe_steps %>
+		</ul>
+	</div>
+	<div class="col-sm-3">
 		<h3>Ingredients</h3>
 		<ul class="ingredients">
 			<%= render @recipe.ingredients %>

@@ -35,8 +35,14 @@ end
   )
   r.save!
   (1..5).each do |ii|
-    r.ingredients.create!(
+    ing = r.ingredients.create!(
       name: "ingredient #{ii}",
+      quantity: ii,
+      unit: "cup"
+    )
+    ing.recipe_steps.create!(
+      instructions: "Add to mixing bowl",
+      recipe_id: r.id,
       quantity: ii,
       unit: "cup"
     )
