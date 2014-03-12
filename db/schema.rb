@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312171059) do
+ActiveRecord::Schema.define(version: 20140312202257) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20140312171059) do
   create_table "microposts", force: true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipes", force: true do |t|
+    t.string   "name"
+    t.string   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
